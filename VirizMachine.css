@@ -1,0 +1,71 @@
+body {
+    background-color: #1a1a1a; /*Define cor do fundo */
+    color: #ffffff; /*Define cor do texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Define a fonte do texto*/
+    display: flex; /* Ativa o modelo de layout flexível, permitindo o alinhamento fácil dos elementos dentro do contêiner. */
+    justify-content: center;/* Centraliza os elementos horizontalmente dentro do contêiner */
+    align-items: center;/* Centraliza os elementos verticalmente dentro do contêiner */
+    min-height: 100vh;/* Define a altura mínima como 100% da altura da tela, garantindo que o conteúdo ocupe toda a tela. */
+    margin: 0;/* Remove qualquer margem externa padrão do elemento*/
+}
+
+.container {
+    background-color: #262626; /* cor do fundo */
+    padding: 40px; /* aumenta/diminui proporcionalmente o tamnanho */
+    border-radius: 15px; /* arredondamento das bordas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra da margem, esta esta em camadas*/
+    width: 80%; /* diz respeito ao tamanho do item, no caso container e usa % para a questão de responsividade*/
+    max-width: 600px; /* diz respeito ao tamanho max do item, no caso container e usa % para a questão de responsividade*/
+    text-align: center;/*alinhamento dos itens dentro do container, como se fosse o alinhamento de texto do word lá mesmo, nesse caso esta no centro*/
+}
+
+h1, h2 {
+
+    color: #d09cff;/*Cor do texto*/
+    margin-bottom: 20px;/*define a margem inferior de um elemento, ou seja, o espaço entre o elemento e o próximo abaixo dele*/
+}
+h3, h4 {
+    color: #b388ff;/*Define cor do texto*/
+    margin-top: 20px;/*mesma coisa aqui*/
+    margin-bottom: 10px;/*define a margem inferior de um elemento, ou seja, o espaço entre o elemento e o próximo abaixo dele*/
+}
+ 
+/*Aplica estilos aos campos de entrada de texto e ao elemento select */
+input[type="text"], select {
+    padding: 12px;/*/* Adiciona um espaço interno de 12 pixels ao redor do conteúdo dentro do input e select */ 
+    border: 2px solid #333;/* Define uma borda de 2 pixels de espessura com a cor cinza escuro */
+    border-radius: 8px;/* Arredonda os cantos do input e select em 8 pixels */
+    width: 80%;/* Define a largura como 80% do contêiner tornando responsivos */
+    margin-bottom: 20px;/*define a margem inferior de um elemento, ou seja, o espaço entre o elemento e o próximo abaixo dele*/
+    background-color: #333;/* define Cor do fundo*/
+    color: #ffffff;/*Define cor do texto*/
+    box-sizing: border-box;/* Faz com que padding e borda sejam incluídos na largura e altura totais, evitando que o elemento ultrapasse o tamanho definido */
+    /*já volto Se quiser reformular fica a vontade */
+} 
+
+/* Aplica estilos no botão */
+button {
+    background-color: #9c27b0;/*Define a cor do botão para roxo*/
+    color: white;/*Define a cor do texto dentro do botão para branco*/
+    padding: 15px 30px;/* Adiciona espaçamento interno: 15px no topo e na parte inferior, 30px nas laterais */
+    border: none;  /* Remove qualquer borda padrão do botão */
+    border-radius: 10px; /* Arredonda os cantos do botão em 10 pixels */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão, indicando que ele é clicável */
+    font-size: 18px; /* Define o tamanho da fonte do texto dentro do botão como 18 pixels */
+    transition: background-color 0.3s, transform 0.2s; /* Altera a cor do botão ao passar com o mouse por cima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra ao botão para criar um efeito de profundidade */
+}
+
+button:hover {
+    background-color: #7b1fa2; /* Altera a cor do botão para um roxo mais escuro */
+    transform: translateY(-3px); /* Faz a movimentação do botão */
+}
+
+.resultado {
+    padding: 20px; /* Aumenta ou diminui proporcionalmente o tamanho */
+    border-radius: 10px; /* Arredonda os cantos do botão */
+    background-color: #333; /* Define a cor do fundo */
+    margin-top: 20px; /* Margem de cima do elemento */
+    font-size: 1.2rem; /* Define tamnaho da fonte */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+}

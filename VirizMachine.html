@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viriz Machine</title>
+    <!-- Aqui vamos importar o aquivo css -->
+    <!-- Feito Por Beatriz Pina e Davi Fernando-->
+     <link rel="stylesheet" href="machinedupla.css">
+  </head>
+
+  <body>
+    <center> <!--Centraliza todo o conteúdo-->
+    <h1>Viriz Machine</h1> <!--Exibe um título principal na página.-->
+
+    <div class="container"> <!--Cria uma div com a classe container para organizar o conteúdo-->
+      <h2>Digite um número:</h3> <!--Campo de entrada para um número, com ID input_num e um placeholder com exemplo.-->
+      <input id="input_num" type="text" placeholder="Ex: 42" />
+      <br /><br /> <!-- Quebra de linha-->
+
+      <h2>Selecione o sistema numérico de origem</h3><!-- Cria um menu dropdown (<select>) para selecionar a base numérica de origem (binário, octal, decimal ou hexadecimal).-->
+      <select id="select_num_origem">
+        <option value="2">Base 2</option>
+        <option value="8">Base 8</option>
+        <option value="10">Base 10</option>
+        <option value="16">Base 16</option>
+      </select>
+      <br /><br /><!-- Quebra de linha-->
+
+      <h2>Escolha qual sistema numérico deseja converter resutados</h3> <!--Cria outro menu dropdown (<select>) para selecionar a base numérica de destino.-->
+      <select id="select_num_final">
+        <option value="2">Base 2</option>
+        <option value="8">Base 8</option>
+        <option value="10">Base 10</option>
+        <option value="16">Base 16</option>
+      </select>
+      <br><br><!-- Quebra de linha-->
+      <button onclick="converter()">Converter</button><!--Botão que, ao ser clicado, executa a função -->
+
+      <div class ="resultado"><p id="p_msm"></p></div> <!--Cria uma div para exibir o resultado da conversão dentro do <p id="p_msm">-->
+    </div><!--Fecha a div container-->
+    </center>
+  </body>
+</html>
+
+<script>
+  function converter() { //Declara a função converter(), que será chamada ao clicar no botão.
+
+    var num = input_num.value ; //Obtém o número digitado no campo input_num
+    //Obtém a base de origem e base de destino selecionadas e as converte para número inteiro
+    var num_origem = parseInt(select_num_origem.value);
+    var num_final = parseInt(select_num_final.value);
+    //Declara as variáveis decimal e resultado para armazenar os valores
+    var decimal = '';
+    var resultado = '';
+
+    // Converte o número da base de origem para decimal usando parseInt(num, base).
+    //  Exemplo: parseInt("101", 2) retorna 5 (convertendo de binário para decimal).
+    decimal = parseInt(num, num_origem);
+
+    //Converte o número decimal para a base de destino usando toString(base)
+    resultado = decimal.toString(num_final)
+
+    // Verifica se a conversão foi bem-sucedida:
+    //Se for inválida (isNaN(decimal)), exibe um alerta de erro.
+    //Se for válida, exibe o resultado dentro da <p id="p_msm">.
+    if(isNaN(decimal)) {
+        alert(`ERROR: Insira valores validados para sua base`);
+    } else {
+        p_msm.innerHTML = `Resultado: ${resultado}`;
+    }
+}
+</script>
